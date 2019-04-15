@@ -9,7 +9,7 @@ function setup() {
         console.log(data);
         noStroke();
         fill(96, 52, 186)
-        ellipse(data.x, data.y, 30, 30)
+        ellipse(data.x, data.y, 10, 10)
     })
 }
 
@@ -21,7 +21,7 @@ function mouseDragged() {
     noStroke();
     fill(255)
     socket.emit('mouse', data)
-    ellipse(mouseX, mouseY, 30, 30)
+    ellipse(mouseX, mouseY, 10, 10)
 }
 
 function draw() {
