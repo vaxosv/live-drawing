@@ -2,7 +2,7 @@ const express = require ('express');
 const app = express();
 const server = require("http").createServer(app);
 const io = require("socket.io").listen(server)
-server.listen(3001)
+server.listen(process.env.PORT || 3001)
 console.log("it runes");
 
 app.use(express.static('public'))
