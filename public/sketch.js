@@ -3,7 +3,7 @@ let socket;
 function setup() {
     createCanvas(windowWidth, windowHeight);
     background(51)
-    socket = io.connect('http://127.0.0.1:3001');
+    socket = io.connect('https://drawing-vaxosv.herokuapp.com');
     socket.on("mouse", (data) => {
 
         console.log(data);
