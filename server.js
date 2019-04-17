@@ -10,8 +10,13 @@ app.use(express.static('public'))
 io.sockets.on('connection', function (socket) {
     console.log(`new connection: ${socket.id}`);
 
-    socket.on("mouse", (data)=>{
+    socket.on("mouse", (data) => {
         socket.broadcast.emit('mouse', data)
+    })
+
+    socket.on("arrow", (data) => {
+        console.log(data);
+        socket.broadcast.emit('arrow', data)
     })
 
 });
