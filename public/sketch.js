@@ -2,7 +2,7 @@ let socket;
 let data = {
     p1: {x: 1},
     p2: {x: 1}
-}
+};
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -19,7 +19,7 @@ function setup() {
     socket.on("arrow", (getData) => {
         background(51);
         fill("#4257a7");
-        data.p2.x = getData.p1.x
+        data.p2.x = getData.p1.x;
         console.log(data);
         ellipse(data.p2.x, 100, 100, 100);
         fill("#8924a7");
@@ -33,7 +33,7 @@ function mouseDragged() {
         y: mouseY
     };
     noStroke();
-    fill(255)
+    fill(255);
     socket.emit('mouse', data);
     ellipse(mouseX, mouseY, 10, 10)
 }
