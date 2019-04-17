@@ -7,8 +7,8 @@ let data = {
 function setup() {
     createCanvas(windowWidth, windowHeight);
     background(51);
-    // socket = io.connect('https://drawing-vaxosv.herokuapp.com');
-    socket = io.connect();
+    socket = io.connect('https://drawing-vaxosv.herokuapp.com');
+    //socket = io.connect();
     socket.on("mouse", (data) => {
 
         noStroke();
